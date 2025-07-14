@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - 梵·高名画精选</title>
+    <title>Privacy Policy - Van Gogh Art Collection</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -83,11 +83,11 @@
 <body>
     <div class="container">
         <div class="language-switch">
-            <a href="#zh">中文</a> | <a href="#en">English</a>
+            <a href="#en">English</a> | <a href="#zh">中文</a>
         </div>
 
         <!-- 中文版本 -->
-        <div id="zh">
+        <div id="zh" style="display: none;">
             <h1>隐私政策</h1>
             
             <div class="app-info">
@@ -198,7 +198,7 @@
         </div>
 
         <!-- 英文版本 -->
-        <div id="en" style="display: none;">
+        <div id="en">
             <h1>Privacy Policy</h1>
             
             <div class="app-info">
@@ -323,10 +323,10 @@
         // 处理锚点链接
         document.addEventListener('DOMContentLoaded', function() {
             const hash = window.location.hash;
-            if (hash === '#en') {
-                showLanguage('en');
-            } else {
+            if (hash === '#zh') {
                 showLanguage('zh');
+            } else {
+                showLanguage('en');
             }
         });
 
