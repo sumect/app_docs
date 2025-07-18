@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick 24 - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .language-selector {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .language-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .language-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .language-btn.active {
+            background: linear-gradient(45deg, #764ba2, #667eea);
+        }
+        
+        .content {
+            display: none;
+        }
+        
+        .content.active {
+            display: block;
+        }
+        
+        h1, h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2em;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            margin-top: 25px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .contact-info {
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: #667eea;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #667eea;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .logo {
+                font-size: 2em;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Quick 24</div>
+            <p>Mathematical Puzzle Game Support</p>
+        </div>
+        
+        <div class="language-selector">
+            <button class="language-btn active" onclick="switchLanguage('en')">English</button>
+            <button class="language-btn" onclick="switchLanguage('zh')">中文</button>
+            <button class="language-btn" onclick="switchLanguage('ja')">日本語</button>
+        </div>
+        
+        <!-- English Content -->
+        <div id="en-content" class="content active">
+            <h1>Support & Help</h1>
+            
+            <div class="section">
+                <h2>About Quick 24</h2>
+                <p>Quick 24 is an engaging mathematical puzzle game where players combine four numbers using basic arithmetic operations (+, -, ×, ÷) to reach the target value of 24. The game features 600 carefully crafted problems across 20 difficulty levels, providing endless entertainment and mental exercise.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-title">600 Problems</div>
+                        <p>Carefully selected problems with 20 difficulty levels (30 problems each)</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">Smart Hints</div>
+                        <p>Intelligent hint system to help you when you're stuck</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">Multiple Game Modes</div>
+                        <p>Practice mode, level progression, and speed challenges</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">Beautiful UI</div>
+                        <p>Modern, intuitive interface with light/dark theme support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>How to Play</h2>
+                <ul>
+                    <li>Select two numbers by tapping on them</li>
+                    <li>Choose an operation (+, -, ×, ÷)</li>
+                    <li>The result replaces the selected numbers</li>
+                    <li>Continue until you reach 24</li>
+                    <li>Use the hint button if you need help</li>
+                    <li>Reset anytime to start over</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Frequently Asked Questions</h2>
+                <h3>Q: How are difficulty levels determined?</h3>
+                <p>A: Difficulty is based on the number of possible solutions and complexity of operations required. Level 1 problems have many solutions, while Level 20 problems may have only one solution.</p>
+                
+                <h3>Q: Can I play offline?</h3>
+                <p>A: Yes! All 600 problems are stored locally, so you can play without an internet connection.</p>
+                
+                <h3>Q: How do I remove ads?</h3>
+                <p>A: You can purchase the "Remove Ads" option in the Settings menu to enjoy an ad-free experience.</p>
+            </div>
+            
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span>Email: <a href="mailto:sumect+24calc@gmail.com">sumect+24calc@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>App Version: 1.0</span>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>Bundle ID: com.sumect.24calc</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chinese Content -->
+        <div id="zh-content" class="content">
+            <h1>支持与帮助</h1>
+            
+            <div class="section">
+                <h2>关于 Quick 24</h2>
+                <p>Quick 24 是一款引人入胜的数学益智游戏，玩家需要使用四则运算（+、-、×、÷）将四个数字组合成目标值24。游戏包含600道精心设计的题目，分为20个难度等级，提供无尽的娱乐和脑力锻炼。</p>
+            </div>
+            
+            <div class="section">
+                <h2>主要特色</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-title">600道题目</div>
+                        <p>精心筛选的题目，20个难度等级（每级30题）</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">智能提示</div>
+                        <p>智能提示系统，在您遇到困难时提供帮助</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">多种游戏模式</div>
+                        <p>练习模式、关卡进阶和竞速挑战</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">精美界面</div>
+                        <p>现代直观的界面，支持浅色/深色主题</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>游戏玩法</h2>
+                <ul>
+                    <li>点击选择两个数字</li>
+                    <li>选择一个运算符（+、-、×、÷）</li>
+                    <li>计算结果将替换所选数字</li>
+                    <li>继续操作直到得到24</li>
+                    <li>需要帮助时可使用提示按钮</li>
+                    <li>随时可以重置重新开始</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>常见问题</h2>
+                <h3>问：难度等级是如何确定的？</h3>
+                <p>答：难度基于可能解法的数量和所需运算的复杂程度。1级题目有很多解法，而20级题目可能只有一个解法。</p>
+                
+                <h3>问：可以离线游戏吗？</h3>
+                <p>答：可以！所有600道题目都存储在本地，无需网络连接即可游戏。</p>
+                
+                <h3>问：如何移除广告？</h3>
+                <p>答：您可以在设置菜单中购买"移除广告"选项，享受无广告的游戏体验。</p>
+            </div>
+            
+            <div class="contact-info">
+                <h2>联系我们</h2>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span>邮箱：<a href="mailto:sumect+24calc@gmail.com">sumect+24calc@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>应用版本：1.0</span>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>应用标识：com.sumect.24calc</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Japanese Content -->
+        <div id="ja-content" class="content">
+            <h1>サポート・ヘルプ</h1>
+            
+            <div class="section">
+                <h2>Quick 24について</h2>
+                <p>Quick 24は魅力的な数学パズルゲームで、プレイヤーは基本的な算術演算（+、-、×、÷）を使って4つの数字を組み合わせ、目標値24を作ります。20の難易度レベルにわたって600問の厳選された問題を収録し、無限の娯楽と脳トレを提供します。</p>
+            </div>
+            
+            <div class="section">
+                <h2>主な機能</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-title">600問</div>
+                        <p>20の難易度レベル（各レベル30問）で厳選された問題</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">スマートヒント</div>
+                        <p>困った時に役立つ知的ヒントシステム</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">複数のゲームモード</div>
+                        <p>練習モード、レベル進行、スピードチャレンジ</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">美しいUI</div>
+                        <p>ライト/ダークテーマ対応のモダンで直感的なインターフェース</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>遊び方</h2>
+                <ul>
+                    <li>タップして2つの数字を選択</li>
+                    <li>演算子（+、-、×、÷）を選択</li>
+                    <li>計算結果が選択した数字と置き換わります</li>
+                    <li>24になるまで続けます</li>
+                    <li>困った時はヒントボタンを使用</li>
+                    <li>いつでもリセットして最初からやり直せます</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>よくある質問</h2>
+                <h3>Q: 難易度レベルはどのように決められていますか？</h3>
+                <p>A: 難易度は可能な解法の数と必要な演算の複雑さに基づいています。レベル1の問題は多くの解法がありますが、レベル20の問題は1つの解法しかない場合があります。</p>
+                
+                <h3>Q: オフラインでプレイできますか？</h3>
+                <p>A: はい！600問すべてがローカルに保存されているため、インターネット接続なしでプレイできます。</p>
+                
+                <h3>Q: 広告を削除するにはどうすればよいですか？</h3>
+                <p>A: 設定メニューで「広告を削除」オプションを購入すると、広告なしでゲームを楽しめます。</p>
+            </div>
+            
+            <div class="contact-info">
+                <h2>お問い合わせ</h2>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span>メール：<a href="mailto:sumect+24calc@gmail.com">sumect+24calc@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>アプリバージョン：1.0</span>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>バンドルID：com.sumect.24calc</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected content
+            document.getElementById(lang + '-content').classList.add('active');
+            
+            // Add active class to selected button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
