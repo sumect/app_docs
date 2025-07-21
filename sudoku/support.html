@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Saga - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            min-height: 100vh;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #007AFF;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #007AFF;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #007AFF, #5AC8FA);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+        }
+        
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #007AFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .lang-switcher:hover {
+            background: #005BBB;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #007AFF;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h3 {
+            color: #333;
+            margin: 20px 0 10px;
+        }
+        
+        .icon {
+            font-size: 1.5em;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .feature-card h4 {
+            color: #007AFF;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-info {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .contact-info a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        ul {
+            padding-left: 30px;
+            margin: 10px 0;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .lang-switcher {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switcher" onclick="toggleLanguage()">
+        <span class="en">中文</span>
+        <span class="zh hidden">English</span>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="app-icon">9</div>
+            <h1>
+                <span class="en">Sudoku Saga Support</span>
+                <span class="zh hidden">数独传奇 帮助中心</span>
+            </h1>
+            <p>
+                <span class="en">Your comprehensive guide to mastering Sudoku</span>
+                <span class="zh hidden">您的数独游戏完全指南</span>
+            </p>
+        </header>
+        
+        <!-- English Content -->
+        <div class="content en">
+            <section class="section">
+                <h2><span class="icon">📖</span> Game Rules</h2>
+                <p>Sudoku is a logic-based number placement puzzle. The objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 sub-grids contain all digits from 1 to 9.</p>
+                
+                <h3>Basic Rules:</h3>
+                <ul>
+                    <li>Each row must contain the numbers 1-9 with no repetition</li>
+                    <li>Each column must contain the numbers 1-9 with no repetition</li>
+                    <li>Each 3×3 box must contain the numbers 1-9 with no repetition</li>
+                    <li>Some cells are pre-filled and cannot be changed</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">🎮</span> How to Play</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><span class="icon">👆</span> Select a Cell</h4>
+                        <p>Tap any empty cell to select it. The selected cell will be highlighted.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><span class="icon">🔢</span> Enter Numbers</h4>
+                        <p>Use the number keyboard at the bottom to fill in your answer.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><span class="icon">📝</span> Notes Mode</h4>
+                        <p>Toggle notes mode to add multiple possible numbers to a cell.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><span class="icon">↩️</span> Undo/Clear</h4>
+                        <p>Made a mistake? Use undo or clear the cell with the delete button.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">🚀</span> Game Modes</h2>
+                
+                <h3>Free Mode</h3>
+                <p>Choose your preferred difficulty and enjoy unlimited puzzles. Perfect for casual play or practice.</p>
+                
+                <h3>Level Mode</h3>
+                <p>Progress through 30 challenging levels, from beginner to expert. Each level increases in difficulty.</p>
+                
+                <h3>Difficulty Levels:</h3>
+                <ul>
+                    <li><strong>Easy:</strong> 36-46 given numbers, perfect for beginners</li>
+                    <li><strong>Medium:</strong> 27-35 given numbers, balanced challenge</li>
+                    <li><strong>Hard:</strong> 17-26 given numbers, for experienced players</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">💡</span> Tips & Strategies</h2>
+                
+                <div class="tip-box">
+                    <h4>Beginner Tips:</h4>
+                    <ul>
+                        <li>Start with rows, columns, or boxes that have the most numbers filled</li>
+                        <li>Look for cells where only one number can fit</li>
+                        <li>Use the highlight feature to track similar numbers</li>
+                        <li>Enable "Hide Used Numbers" to see available options</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>Advanced Strategies:</h4>
+                    <ul>
+                        <li><strong>Naked Singles:</strong> When a cell can only contain one number</li>
+                        <li><strong>Hidden Singles:</strong> When a number can only go in one cell within a unit</li>
+                        <li><strong>Naked Pairs/Triples:</strong> When 2-3 cells in a unit can only contain the same 2-3 numbers</li>
+                        <li><strong>X-Wing:</strong> Advanced technique using rows and columns</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">⚙️</span> Settings Guide</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Highlight Areas</h4>
+                        <p>Highlights the row, column, and 3×3 box of the selected cell.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Highlight Similar</h4>
+                        <p>Highlights all cells containing the same number as the selected cell.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Hide Used Numbers</h4>
+                        <p>Dims numbers on the keyboard that appear 9 times on the board.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Smart Notes</h4>
+                        <p>Automatically removes invalid notes when you place a number.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Timer</h4>
+                        <p>Shows elapsed time during gameplay. Can be hidden for relaxed play.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Theme</h4>
+                        <p>Choose between light, dark, or system theme.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">🏆</span> Experience System</h2>
+                <p>Earn experience points (XP) by completing puzzles:</p>
+                <ul>
+                    <li>Easy puzzles: 10 XP</li>
+                    <li>Medium puzzles: 20 XP</li>
+                    <li>Hard puzzles: 30 XP</li>
+                    <li>Level mode completion: Bonus XP based on difficulty</li>
+                    <li>Watch reward ads for extra XP (optional)</li>
+                </ul>
+                <p>Level up to unlock achievements and track your progress!</p>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">👑</span> Premium Features</h2>
+                <p>Remove all advertisements and enjoy an uninterrupted gaming experience. One-time purchase includes:</p>
+                <ul>
+                    <li>No banner ads</li>
+                    <li>No interstitial ads</li>
+                    <li>Clean, focused interface</li>
+                    <li>Support future app development</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">📧</span> Contact Us</h2>
+                <div class="contact-info">
+                    <p>Need more help or have suggestions? We'd love to hear from you!</p>
+                    <p><strong>Email:</strong> <a href="mailto:sumect+sudoku@gmail.com">sumect+sudoku@gmail.com</a></p>
+                    <p><strong>Response time:</strong> Usually within 24-48 hours</p>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Chinese Content -->
+        <div class="content zh hidden">
+            <section class="section">
+                <h2><span class="icon">📖</span> 游戏规则</h2>
+                <p>数独是一种基于逻辑的数字填充游戏。目标是在9×9的网格中填入数字，使每一列、每一行以及九个3×3的子网格都包含1到9的所有数字。</p>
+                
+                <h3>基本规则：</h3>
+                <ul>
+                    <li>每一行必须包含数字1-9，不能重复</li>
+                    <li>每一列必须包含数字1-9，不能重复</li>
+                    <li>每个3×3宫格必须包含数字1-9，不能重复</li>
+                    <li>预填的数字不能更改</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">🎮</span> 如何游戏</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><span class="icon">👆</span> 选择格子</h4>
+                        <p>点击任意空格进行选择，被选中的格子会高亮显示。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><span class="icon">🔢</span> 输入数字</h4>
+                        <p>使用底部的数字键盘填入答案。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><span class="icon">📝</span> 笔记模式</h4>
+                        <p>切换笔记模式，可以在格子中添加多个可能的数字。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><span class="icon">↩️</span> 撤销/清除</h4>
+                        <p>填错了？使用撤销功能或删除按钮清除格子。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">🚀</span> 游戏模式</h2>
+                
+                <h3>自由模式</h3>
+                <p>选择您喜欢的难度，享受无限的谜题。适合休闲游戏或练习。</p>
+                
+                <h3>闯关模式</h3>
+                <p>挑战30个精心设计的关卡，从初学者到专家级别，难度逐步提升。</p>
+                
+                <h3>难度等级：</h3>
+                <ul>
+                    <li><strong>简单：</strong> 36-46个给定数字，适合初学者</li>
+                    <li><strong>中等：</strong> 27-35个给定数字，平衡的挑战</li>
+                    <li><strong>困难：</strong> 17-26个给定数字，适合经验丰富的玩家</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">💡</span> 技巧与策略</h2>
+                
+                <div class="tip-box">
+                    <h4>初学者技巧：</h4>
+                    <ul>
+                        <li>从填入数字最多的行、列或宫格开始</li>
+                        <li>寻找只能填入一个数字的格子</li>
+                        <li>使用高亮功能追踪相同的数字</li>
+                        <li>启用"隐藏已用数字"查看可用选项</li>
+                    </ul>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>进阶策略：</h4>
+                    <ul>
+                        <li><strong>唯一候选数：</strong> 当一个格子只能填入一个数字时</li>
+                        <li><strong>隐性唯一候选数：</strong> 当一个数字在某个单元中只能填入一个格子时</li>
+                        <li><strong>数对/三数组：</strong> 当一个单元中的2-3个格子只能包含相同的2-3个数字时</li>
+                        <li><strong>X翼：</strong> 使用行和列的高级技巧</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">⚙️</span> 设置指南</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>高亮区域</h4>
+                        <p>高亮显示选中格子所在的行、列和3×3宫格。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>高亮相同数字</h4>
+                        <p>高亮显示与选中格子相同数字的所有格子。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>隐藏已用数字</h4>
+                        <p>在键盘上淡化已经出现9次的数字。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>智能笔记</h4>
+                        <p>当您放置数字时自动删除无效的笔记。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>计时器</h4>
+                        <p>显示游戏时间。可以隐藏以享受轻松游戏。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>主题</h4>
+                        <p>选择亮色、暗色或跟随系统主题。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">🏆</span> 经验系统</h2>
+                <p>通过完成谜题获得经验值（XP）：</p>
+                <ul>
+                    <li>简单谜题：10 XP</li>
+                    <li>中等谜题：20 XP</li>
+                    <li>困难谜题：30 XP</li>
+                    <li>闯关模式：基于难度的额外奖励</li>
+                    <li>观看奖励广告获得额外XP（可选）</li>
+                </ul>
+                <p>升级解锁成就，追踪您的进步！</p>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">👑</span> 高级功能</h2>
+                <p>移除所有广告，享受无干扰的游戏体验。一次性购买包括：</p>
+                <ul>
+                    <li>无横幅广告</li>
+                    <li>无插屏广告</li>
+                    <li>清爽专注的界面</li>
+                    <li>支持应用的持续开发</li>
+                </ul>
+            </section>
+            
+            <section class="section">
+                <h2><span class="icon">📧</span> 联系我们</h2>
+                <div class="contact-info">
+                    <p>需要更多帮助或有建议？我们很乐意听到您的声音！</p>
+                    <p><strong>邮箱：</strong> <a href="mailto:sumect+sudoku@gmail.com">sumect+sudoku@gmail.com</a></p>
+                    <p><strong>回复时间：</strong> 通常在24-48小时内</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script>
+        function toggleLanguage() {
+            const enElements = document.querySelectorAll('.en');
+            const zhElements = document.querySelectorAll('.zh');
+            
+            enElements.forEach(el => el.classList.toggle('hidden'));
+            zhElements.forEach(el => el.classList.toggle('hidden'));
+            
+            // Update HTML lang attribute
+            const html = document.documentElement;
+            html.lang = html.lang === 'en' ? 'zh' : 'en';
+        }
+    </script>
+</body>
+</html>
