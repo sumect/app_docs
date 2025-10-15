@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Plando</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f5f5f7;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: block;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            color: #1d1d1f;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            color: #1d1d1f;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        h3 {
+            color: #424245;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            color: #424245;
+            font-size: 1.05em;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 24px;
+            margin: 0 8px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+        }
+
+        .lang-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .subtitle {
+            color: #86868b;
+            font-size: 1.15em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, #f8f9ff 0%, #faf5ff 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #e8e8ff;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-box h2 {
+            color: white;
+            margin-top: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .contact-box p {
+            color: white;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .contact-box a:hover {
+            opacity: 0.9;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #faf5ff 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e8e8ff;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        code {
+            background: #f5f5f7;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        strong {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./plandopro_icon.png" alt="PlandoPro Logo" class="logo">
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLang('en')">English</button>
+                <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+            </div>
+        </div>
+
+        <!-- English Version -->
+        <div id="en" class="lang-content active">
+            <h1>PlandoPro Support</h1>
+            <p class="subtitle">Get help with your task management journey</p>
+
+            <h2>📱 About PlandoPro</h2>
+            <p>PlandoPro is a modern task management app for iOS that helps you organize your life with powerful features including task scheduling, calendar views, Eisenhower Matrix, Pomodoro timer, and seamless cloud synchronization.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Smart Tasks</h3>
+                    <p>Create tasks with due dates, reminders, tags, priorities, and subtasks</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Calendar View</h3>
+                    <p>Visualize your tasks in an intuitive calendar interface</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Priority Matrix</h3>
+                    <p>Organize tasks using the Eisenhower Matrix for better focus</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍅</div>
+                    <h3>Pomodoro Timer</h3>
+                    <p>Stay focused with built-in timer and ambient sounds</p>
+                </div>
+            </div>
+            
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I create a new task?</div>
+                <p>Tap the floating "+" button on the Today, Calendar, or Matrix screens. Fill in the task details including title, due date, priority, and tags. You can also add subtasks and set custom reminders.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How does task synchronization work?</div>
+                <p>PlandoPro uses Firebase/Firestore to sync your tasks across all your devices in real-time. Simply sign in with your Google account, and your tasks will be automatically synchronized. The app also works offline, and changes will sync when you're back online.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What are recurring tasks?</div>
+                <p>Recurring tasks automatically create new instances based on your schedule (daily, weekly, monthly, or yearly). When you complete a recurring task, a new one is automatically generated for the next occurrence.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I use the Eisenhower Matrix?</div>
+                <p>Go to the Matrix tab and drag tasks into one of four quadrants: Urgent & Important, Not Urgent but Important, Urgent but Not Important, or Neither. This helps you prioritize what truly matters.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What is the Pomodoro Timer?</div>
+                <p>The Pomodoro technique helps you focus by working in 25-minute intervals with short breaks. Go to the Pomodoro tab, optionally link a task, and start the timer. You can customize work/break durations and enjoy ambient sounds while focusing.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I manage notifications?</div>
+                <p>Go to Settings → Notifications to configure your preferences. You can enable/disable task reminders, daily summary notifications, and customize the daily review time. Make sure notifications are enabled in iOS Settings as well.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What are the premium features?</div>
+                <p>Premium subscribers get access to unlimited tasks, advanced statistics, custom themes, priority support, and future premium features. You can subscribe through the Settings page.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I restore my subscription?</div>
+                <p>Go to Settings → Subscription → Restore Purchases. This will restore any active subscriptions associated with your Apple ID.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I export my data?</div>
+                <p>Yes! Go to Settings → Data Management to export your tasks. You can also request a complete data export by contacting our support team.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I delete my account?</div>
+                <p>Go to Settings → Account → Delete Account. This will permanently delete all your data from our servers. This action cannot be undone, so please make sure to export your data first if needed.</p>
+            </div>
+            
+            <h2>🔧 Troubleshooting</h2>
+            
+            <h3>Tasks not syncing?</h3>
+            <ol>
+                <li>Check your internet connection</li>
+                <li>Make sure you're signed in with your Google account</li>
+                <li>Try signing out and signing back in</li>
+                <li>Restart the app</li>
+            </ol>
+            
+            <h3>Notifications not working?</h3>
+            <ol>
+                <li>Go to iOS Settings → PlandoPro → Notifications and ensure they're enabled</li>
+                <li>Check that Do Not Disturb is not active</li>
+                <li>Verify notification settings within the PlandoPro app</li>
+                <li>Try deleting and recreating the reminder</li>
+            </ol>
+
+            <h3>App crashing or freezing?</h3>
+            <ol>
+                <li>Make sure you have the latest version of PlandoPro from the App Store</li>
+                <li>Restart your device</li>
+                <li>Check for iOS updates</li>
+                <li>If the problem persists, contact support with details about when the crash occurs</li>
+            </ol>
+            
+            <h2>💡 Tips & Tricks</h2>
+            <ul>
+                <li><strong>Quick Complete:</strong> Swipe right on any task to quickly mark it as complete</li>
+                <li><strong>Quick Delete:</strong> Swipe left on any task to delete it</li>
+                <li><strong>Undo:</strong> After completing or deleting a task, tap the undo button that appears at the bottom</li>
+                <li><strong>Widget:</strong> Add the PlandoPro widget to your home screen for quick access to today's tasks</li>
+                <li><strong>Deep Links:</strong> Use the widget's "New Task" button to quickly create tasks</li>
+                <li><strong>Search:</strong> Use the search bar in the Today view to quickly find tasks</li>
+                <li><strong>Batch Operations:</strong> Long-press on tasks for additional options</li>
+            </ul>
+            
+            <h2>🔒 Privacy & Security</h2>
+            <p>Your privacy is our top priority. We never share your personal data with third parties for marketing purposes. All your task data is encrypted and stored securely in Firebase. You have full control over your data and can delete your account at any time. Read our full <a href="privacy-policy.html">Privacy Policy</a> for more details.</p>
+            
+            <h2>📋 System Requirements</h2>
+            <ul>
+                <li>iOS 17.0 or later</li>
+                <li>iPhone or iPad</li>
+                <li>Internet connection for sync (offline mode available)</li>
+                <li>Google account for sign-in</li>
+            </ul>
+            
+            <div class="contact-box">
+                <h2>📧 Contact Support</h2>
+                <p>Can't find what you're looking for? We're here to help!</p>
+                <p><strong>Email:</strong> <a href="mailto:sumect@gmail.com">sumect@gmail.com</a></p>
+                <p style="margin-top: 20px; font-size: 0.9em;">We typically respond within 24-48 hours</p>
+            </div>
+        </div>
+        
+        <!-- Chinese Version -->
+        <div id="zh" class="lang-content">
+            <h1>PlandoPro 支持</h1>
+            <p class="subtitle">获取任务管理旅程的帮助</p>
+
+            <h2>📱 关于 PlandoPro</h2>
+            <p>PlandoPro 是一款现代化的 iOS 任务管理应用，通过强大的功能帮助您组织生活，包括任务调度、日历视图、艾森豪威尔矩阵、番茄钟计时器和无缝云同步。</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>智能任务</h3>
+                    <p>创建带有截止日期、提醒、标签、优先级和子任务的任务</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>日历视图</h3>
+                    <p>在直观的日历界面中可视化您的任务</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>优先级矩阵</h3>
+                    <p>使用艾森豪威尔矩阵组织任务，更好地聚焦</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍅</div>
+                    <h3>番茄钟计时器</h3>
+                    <p>使用内置计时器和环境音保持专注</p>
+                </div>
+            </div>
+            
+            <h2>❓ 常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何创建新任务？</div>
+                <p>在"今天"、"日历"或"矩阵"屏幕上点击浮动的"+"按钮。填写任务详情，包括标题、截止日期、优先级和标签。您还可以添加子任务并设置自定义提醒。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">任务同步如何工作？</div>
+                <p>PlandoPro 使用 Firebase/Firestore 实时在您的所有设备上同步任务。只需使用您的 Google 账户登录，您的任务就会自动同步。应用也支持离线工作，当您重新联网时更改会自动同步。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">什么是重复任务？</div>
+                <p>重复任务会根据您的时间表（每天、每周、每月或每年）自动创建新实例。当您完成一个重复任务时，会自动为下一次出现生成新任务。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何使用艾森豪威尔矩阵？</div>
+                <p>转到"矩阵"标签，将任务拖动到四个象限之一：紧急且重要、不紧急但重要、紧急但不重要、既不紧急也不重要。这有助于您优先处理真正重要的事情。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">什么是番茄钟计时器？</div>
+                <p>番茄工作法通过 25 分钟的工作间隔和短暂休息帮助您保持专注。转到"番茄钟"标签，可选择关联一个任务，然后启动计时器。您可以自定义工作/休息时长，并在专注时享受环境音。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何管理通知？</div>
+                <p>转到"设置"→"通知"配置您的偏好。您可以启用/禁用任务提醒、每日摘要通知，并自定义每日回顾时间。还要确保在 iOS 设置中启用了通知。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">高级功能有哪些？</div>
+                <p>高级订阅用户可以访问无限任务、高级统计、自定义主题、优先支持和未来的高级功能。您可以通过设置页面订阅。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何恢复我的订阅？</div>
+                <p>转到"设置"→"订阅"→"恢复购买"。这将恢复与您的 Apple ID 关联的任何活跃订阅。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">我可以导出我的数据吗？</div>
+                <p>可以！转到"设置"→"数据管理"导出您的任务。您也可以通过联系我们的支持团队请求完整的数据导出。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何删除我的账户？</div>
+                <p>转到"设置"→"账户"→"删除账户"。这将从我们的服务器永久删除您的所有数据。此操作无法撤销，因此如果需要，请先确保导出您的数据。</p>
+            </div>
+            
+            <h2>🔧 故障排除</h2>
+            
+            <h3>任务无法同步？</h3>
+            <ol>
+                <li>检查您的互联网连接</li>
+                <li>确保您已使用 Google 账户登录</li>
+                <li>尝试退出并重新登录</li>
+                <li>重启应用</li>
+            </ol>
+            
+            <h3>通知不工作？</h3>
+            <ol>
+                <li>转到 iOS 设置 → PlandoPro → 通知，确保已启用</li>
+                <li>检查"勿扰模式"是否未激活</li>
+                <li>验证 PlandoPro 应用内的通知设置</li>
+                <li>尝试删除并重新创建提醒</li>
+            </ol>
+
+            <h3>应用崩溃或卡顿？</h3>
+            <ol>
+                <li>确保您从 App Store 安装了最新版本的 PlandoPro</li>
+                <li>重启您的设备</li>
+                <li>检查 iOS 更新</li>
+                <li>如果问题仍然存在，请联系支持并提供崩溃发生时的详细信息</li>
+            </ol>
+            
+            <h2>💡 提示与技巧</h2>
+            <ul>
+                <li><strong>快速完成：</strong>向右滑动任何任务以快速标记为完成</li>
+                <li><strong>快速删除：</strong>向左滑动任何任务以删除它</li>
+                <li><strong>撤销：</strong>完成或删除任务后，点击底部出现的撤销按钮</li>
+                <li><strong>小组件：</strong>将 PlandoPro 小组件添加到主屏幕以快速访问今天的任务</li>
+                <li><strong>深度链接：</strong>使用小组件的"新建任务"按钮快速创建任务</li>
+                <li><strong>搜索：</strong>使用"今天"视图中的搜索栏快速查找任务</li>
+                <li><strong>批量操作：</strong>长按任务以获取更多选项</li>
+            </ul>
+            
+            <h2>🔒 隐私与安全</h2>
+            <p>您的隐私是我们的首要任务。我们绝不会出于营销目的与第三方共享您的个人数据。您的所有任务数据都经过加密并安全存储在 Firebase 中。您对自己的数据拥有完全控制权，可以随时删除您的账户。阅读我们完整的<a href="privacy-policy.html">隐私政策</a>了解更多详情。</p>
+            
+            <h2>📋 系统要求</h2>
+            <ul>
+                <li>iOS 17.0 或更高版本</li>
+                <li>iPhone 或 iPad</li>
+                <li>用于同步的互联网连接（支持离线模式）</li>
+                <li>用于登录的 Google 账户</li>
+            </ul>
+            
+            <div class="contact-box">
+                <h2>📧 联系支持</h2>
+                <p>找不到您要找的内容？我们随时为您提供帮助！</p>
+                <p><strong>邮箱：</strong><a href="mailto:sumect@gmail.com">sumect@gmail.com</a></p>
+                <p style="margin-top: 20px; font-size: 0.9em;">我们通常在 24-48 小时内回复</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function switchLang(lang) {
+            // Hide all language contents
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected language
+            document.getElementById(lang).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
