@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - PlandoPro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f5f5f7;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: block;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        h1 {
+            color: #1d1d1f;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        h2 {
+            color: #1d1d1f;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        h3 {
+            color: #424245;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        p, li {
+            margin-bottom: 12px;
+            color: #424245;
+            font-size: 1.05em;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .lang-btn {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 24px;
+            margin: 0 8px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+        }
+        
+        .lang-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .lang-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .update-date {
+            color: #86868b;
+            font-size: 1em;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #f8f9ff 0%, #faf5ff 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border: 1px solid #e8e8ff;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        strong {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #fff4e6 0%, #ffe6f0 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./plandopro_icon.png" alt="PlandoPro Logo" class="logo">
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLang('en')">English</button>
+                <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+            </div>
+        </div>
+        
+        <!-- English Version -->
+        <div id="en" class="lang-content active">
+            <h1>Terms of Service</h1>
+            <p class="update-date">Last Updated: January 2025</p>
+            
+            <p>Welcome to PlandoPro! These Terms of Service ("Terms") govern your use of the PlandoPro mobile application ("App", "Service", or "PlandoPro"). By downloading, installing, or using PlandoPro, you agree to be bound by these Terms.</p>
+            
+            <h2>1. Acceptance of Terms</h2>
+            
+            <p>By accessing or using PlandoPro, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, please do not use the App.</p>
+            
+            <h2>2. Description of Service</h2>
+            
+            <p>PlandoPro is a task management application for iOS devices that provides:</p>
+            <ul>
+                <li>Task creation, organization, and scheduling</li>
+                <li>Calendar and timeline views</li>
+                <li>Eisenhower Matrix for task prioritization</li>
+                <li>Pomodoro timer functionality</li>
+                <li>Cloud synchronization via Firebase/Firestore</li>
+                <li>Local and push notifications</li>
+                <li>Home screen widgets</li>
+                <li>Premium subscription features</li>
+            </ul>
+            
+            <h2>3. User Accounts</h2>
+            
+            <h3>3.1 Account Creation</h3>
+            <p>To use certain features of PlandoPro, you must create an account by signing in with your Google account. You are responsible for:</p>
+            <ul>
+                <li>Maintaining the confidentiality of your account credentials</li>
+                <li>All activities that occur under your account</li>
+                <li>Notifying us immediately of any unauthorized use</li>
+            </ul>
+            
+            <h3>3.2 Account Requirements</h3>
+            <p>You must be at least 13 years old to use PlandoPro. By creating an account, you represent that you meet this age requirement.</p>
+            
+            <h2>4. Subscription and Payment</h2>
+            
+            <h3>4.1 Premium Features</h3>
+            <p>PlandoPro offers premium features through in-app subscriptions managed by RevenueCat and Apple's App Store. Premium features may include:</p>
+            <ul>
+                <li>Unlimited tasks and projects</li>
+                <li>Advanced customization options</li>
+                <li>Priority customer support</li>
+                <li>Additional themes and features</li>
+            </ul>
+            
+            <h3>4.2 Billing</h3>
+            <p>Subscriptions are billed through your Apple ID account. Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period.</p>
+            
+            <h3>4.3 Cancellation and Refunds</h3>
+            <p>You can cancel your subscription at any time through your Apple ID account settings. Refunds are handled according to Apple's refund policy. We do not provide refunds directly.</p>
+
+            <h2>5. User Conduct</h2>
+
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the App for any illegal or unauthorized purpose</li>
+                <li>Attempt to gain unauthorized access to the App or its systems</li>
+                <li>Interfere with or disrupt the App's functionality</li>
+                <li>Reverse engineer, decompile, or disassemble the App</li>
+                <li>Use the App to transmit viruses, malware, or harmful code</li>
+                <li>Violate any applicable laws or regulations</li>
+                <li>Impersonate any person or entity</li>
+            </ul>
+
+            <h2>6. Intellectual Property</h2>
+
+            <p>PlandoPro and all its content, features, and functionality are owned by us and are protected by international copyright, trademark, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use the App for personal, non-commercial purposes.</p>
+
+            <h2>7. User Data and Privacy</h2>
+
+            <p>Your use of PlandoPro is also governed by our Privacy Policy. We collect, use, and protect your data as described in the Privacy Policy. You retain all rights to your task data and content created within the App.</p>
+
+            <h2>8. Service Availability</h2>
+
+            <p>We strive to provide reliable service, but we do not guarantee that:</p>
+            <ul>
+                <li>The App will be available at all times without interruption</li>
+                <li>The App will be error-free or bug-free</li>
+                <li>Any defects will be corrected immediately</li>
+                <li>The App will meet all your specific requirements</li>
+            </ul>
+
+            <p>We reserve the right to modify, suspend, or discontinue the App (or any part thereof) at any time with or without notice.</p>
+
+            <h2>9. Limitation of Liability</h2>
+
+            <div class="highlight">
+                <p><strong>IMPORTANT:</strong> To the maximum extent permitted by law, PlandoPro and its developers shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:</p>
+                <ul>
+                    <li>Your use or inability to use the App</li>
+                    <li>Any unauthorized access to or use of our servers and/or any personal information stored therein</li>
+                    <li>Any interruption or cessation of transmission to or from the App</li>
+                    <li>Any bugs, viruses, or similar issues transmitted through the App by any third party</li>
+                    <li>Any errors or omissions in any content or for any loss or damage incurred as a result of your use of any content</li>
+                </ul>
+            </div>
+
+            <h2>10. Indemnification</h2>
+
+            <p>You agree to indemnify, defend, and hold harmless PlandoPro and its developers from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the App or violation of these Terms.</p>
+
+            <h2>11. Changes to Terms</h2>
+
+            <p>We reserve the right to modify these Terms at any time. We will notify you of significant changes through the App or via email. Your continued use of PlandoPro after such modifications constitutes your acceptance of the updated Terms.</p>
+
+            <h2>12. Termination</h2>
+
+            <p>We may terminate or suspend your account and access to the App immediately, without prior notice or liability, for any reason, including if you breach these Terms. Upon termination, your right to use the App will immediately cease.</p>
+
+            <p>You may delete your account at any time through the App's settings. Upon account deletion, your data will be permanently removed within 30 days as described in our Privacy Policy.</p>
+
+            <h2>13. Governing Law</h2>
+
+            <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law provisions.</p>
+
+            <h2>14. Contact Us</h2>
+
+            <div class="contact">
+                <p>If you have any questions about these Terms of Service, please contact us:</p>
+                <p><strong>Email:</strong> <a href="mailto:sumect@gmail.com">sumect@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- Chinese Version -->
+        <div id="zh" class="lang-content">
+            <h1>服务条款</h1>
+            <p class="update-date">最后更新：2025年1月</p>
+
+            <p>欢迎使用 PlandoPro！这些服务条款（"条款"）管理您对 PlandoPro 移动应用程序（"应用"、"服务"或"PlandoPro"）的使用。通过下载、安装或使用 PlandoPro，您同意受这些条款的约束。</p>
+
+            <h2>1. 接受条款</h2>
+
+            <p>通过访问或使用 PlandoPro，您确认已阅读、理解并同意受这些条款和我们的隐私政策的约束。如果您不同意这些条款，请不要使用本应用。</p>
+
+            <h2>2. 服务描述</h2>
+
+            <p>PlandoPro 是一款适用于 iOS 设备的任务管理应用程序，提供：</p>
+            <ul>
+                <li>任务创建、组织和调度</li>
+                <li>日历和时间线视图</li>
+                <li>艾森豪威尔矩阵用于任务优先级排序</li>
+                <li>番茄钟计时器功能</li>
+                <li>通过 Firebase/Firestore 进行云同步</li>
+                <li>本地和推送通知</li>
+                <li>主屏幕小组件</li>
+                <li>高级订阅功能</li>
+            </ul>
+
+            <h2>3. 用户账户</h2>
+
+            <h3>3.1 账户创建</h3>
+            <p>要使用 PlandoPro 的某些功能，您必须通过使用 Google 账户登录来创建账户。您需要负责：</p>
+            <ul>
+                <li>维护账户凭据的机密性</li>
+                <li>在您账户下发生的所有活动</li>
+                <li>立即通知我们任何未经授权的使用</li>
+            </ul>
+
+            <h3>3.2 账户要求</h3>
+            <p>您必须年满 13 岁才能使用 PlandoPro。通过创建账户，您声明您符合此年龄要求。</p>
+
+            <h2>4. 订阅和付款</h2>
+
+            <h3>4.1 高级功能</h3>
+            <p>PlandoPro 通过由 RevenueCat 和 Apple App Store 管理的应用内订阅提供高级功能。高级功能可能包括：</p>
+            <ul>
+                <li>无限任务和项目</li>
+                <li>高级自定义选项</li>
+                <li>优先客户支持</li>
+                <li>额外的主题和功能</li>
+            </ul>
+
+            <h3>4.2 计费</h3>
+            <p>订阅通过您的 Apple ID 账户计费。购买确认后，费用将从您的 Apple ID 账户中扣除。除非在当前周期结束前至少 24 小时关闭自动续订，否则订阅将自动续订。</p>
+
+            <h3>4.3 取消和退款</h3>
+            <p>您可以随时通过 Apple ID 账户设置取消订阅。退款按照 Apple 的退款政策处理。我们不直接提供退款。</p>
+
+            <h2>5. 用户行为</h2>
+
+            <p>您同意不：</p>
+            <ul>
+                <li>将应用用于任何非法或未经授权的目的</li>
+                <li>尝试未经授权访问应用或其系统</li>
+                <li>干扰或破坏应用的功能</li>
+                <li>对应用进行反向工程、反编译或反汇编</li>
+                <li>使用应用传输病毒、恶意软件或有害代码</li>
+                <li>违反任何适用的法律或法规</li>
+                <li>冒充任何人或实体</li>
+            </ul>
+
+            <h2>6. 知识产权</h2>
+
+            <p>PlandoPro 及其所有内容、功能和功能性均归我们所有，并受国际版权、商标和其他知识产权法的保护。您被授予有限的、非独占的、不可转让的许可，以用于个人、非商业目的使用本应用。</p>
+
+            <h2>7. 用户数据和隐私</h2>
+
+            <p>您对 PlandoPro 的使用也受我们的隐私政策管理。我们按照隐私政策中的描述收集、使用和保护您的数据。您保留对在应用内创建的任务数据和内容的所有权利。</p>
+
+            <h2>8. 服务可用性</h2>
+
+            <p>我们努力提供可靠的服务，但我们不保证：</p>
+            <ul>
+                <li>应用将始终可用且不会中断</li>
+                <li>应用将无错误或无缺陷</li>
+                <li>任何缺陷将立即得到纠正</li>
+                <li>应用将满足您的所有特定要求</li>
+            </ul>
+
+            <p>我们保留随时修改、暂停或终止应用（或其任何部分）的权利，无论是否通知。</p>
+
+            <h2>9. 责任限制</h2>
+
+            <div class="highlight">
+                <p><strong>重要提示：</strong>在法律允许的最大范围内，PlandoPro 及其开发者不对任何间接、附带、特殊、后果性或惩罚性损害，或任何利润或收入损失（无论是直接还是间接产生的），或任何数据、使用、商誉或其他无形损失承担责任，这些损失源于：</p>
+                <ul>
+                    <li>您使用或无法使用应用</li>
+                    <li>任何未经授权访问或使用我们的服务器和/或其中存储的任何个人信息</li>
+                    <li>应用的任何传输中断或停止</li>
+                    <li>任何第三方通过应用传输的错误、病毒或类似问题</li>
+                    <li>任何内容中的任何错误或遗漏，或因您使用任何内容而导致的任何损失或损害</li>
+                </ul>
+            </div>
+
+            <h2>10. 赔偿</h2>
+
+            <p>您同意赔偿、辩护并使 PlandoPro 及其开发者免受因您使用应用或违反这些条款而产生的任何索赔、损害、损失、责任和费用（包括法律费用）。</p>
+
+            <h2>11. 条款变更</h2>
+
+            <p>我们保留随时修改这些条款的权利。我们将通过应用或电子邮件通知您重大变更。在此类修改后继续使用 PlandoPro 即表示您接受更新后的条款。</p>
+
+            <h2>12. 终止</h2>
+
+            <p>我们可能会立即终止或暂停您的账户和对应用的访问，无需事先通知或承担责任，原因包括您违反这些条款。终止后，您使用应用的权利将立即停止。</p>
+
+            <p>您可以随时通过应用的设置删除您的账户。账户删除后，您的数据将在 30 天内永久删除，如我们的隐私政策中所述。</p>
+
+            <h2>13. 适用法律</h2>
+
+            <p>这些条款应受适用法律管辖并根据其解释，不考虑法律冲突条款。</p>
+
+            <h2>14. 联系我们</h2>
+
+            <div class="contact">
+                <p>如果您对这些服务条款有任何问题，请联系我们：</p>
+                <p><strong>邮箱：</strong><a href="mailto:sumect@gmail.com">sumect@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // Hide all language content
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected language content
+            document.getElementById(lang).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
