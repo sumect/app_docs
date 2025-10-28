@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SuppleMate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .language-toggle {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        
+        .language-toggle button {
+            background: #007AFF;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 8px;
+            transition: background 0.3s;
+        }
+        
+        .language-toggle button:hover {
+            background: #0051D5;
+        }
+        
+        .language-toggle button.active {
+            background: #34C759;
+        }
+        
+        h1 {
+            color: #1d1d1f;
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            color: #1d1d1f;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: #1d1d1f;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #515154;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #515154;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .contact {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .contact a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .last-updated {
+            color: #86868b;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-toggle">
+            <button onclick="switchLanguage('en')" id="btn-en" class="active">English</button>
+            <button onclick="switchLanguage('zh')" id="btn-zh">中文</button>
+        </div>
+
+        <!-- English Version -->
+        <div id="content-en" class="lang-content active">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: January 2025</p>
+
+            <p>Welcome to SuppleMate ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+
+            <div class="highlight">
+                <strong>Key Points:</strong>
+                <ul>
+                    <li>Your supplement data is stored locally on your device and optionally synced via Firebase</li>
+                    <li>We only use Firebase and RevenueCat to provide our services</li>
+                    <li>We do not share your data with third parties without your consent</li>
+                    <li>You have full control over your data</li>
+                </ul>
+            </div>
+
+            <h2>1. Information We Collect</h2>
+
+            <h3>1.1 Information You Provide</h3>
+            <ul>
+                <li><strong>Account Information:</strong> When you sign in with Google or Apple, we collect your email address and basic profile information</li>
+                <li><strong>Supplement Data:</strong> Information about your supplements, including names, dosages, schedules, inventory, and expiration dates</li>
+                <li><strong>Usage Records:</strong> Records of when you take your supplements</li>
+                <li><strong>Settings and Preferences:</strong> Your app settings, notification preferences, and time label configurations</li>
+            </ul>
+
+            <h3>1.2 Automatically Collected Information</h3>
+            <ul>
+                <li><strong>Device Information:</strong> Device type, operating system version, and app version</li>
+                <li><strong>Usage Analytics:</strong> App usage patterns, feature interactions, and crash reports (via Firebase Analytics)</li>
+                <li><strong>Notification Tokens:</strong> Device tokens for push notifications (via Firebase Cloud Messaging)</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+
+            <p>We use the collected information for the following purposes:</p>
+            <ul>
+                <li><strong>Service Delivery:</strong> To provide supplement reminders, track your intake, and manage your supplement inventory</li>
+                <li><strong>Data Synchronization:</strong> To sync your data across your devices when you're signed in</li>
+                <li><strong>App Improvement:</strong> To analyze usage patterns and improve app functionality</li>
+                <li><strong>Subscription Management:</strong> To manage your premium subscription via RevenueCat</li>
+                <li><strong>Notifications:</strong> To send you local and push notifications about your supplement schedule</li>
+                <li><strong>Customer Support:</strong> To respond to your inquiries and provide technical support</li>
+            </ul>
+
+            <h2>3. Third-Party Services</h2>
+
+            <p>We use the following third-party services to provide and improve our app:</p>
+
+            <h3>3.1 Firebase (Google)</h3>
+            <ul>
+                <li><strong>Firebase Authentication:</strong> For secure user authentication</li>
+                <li><strong>Firebase Firestore:</strong> For cloud data storage and synchronization</li>
+                <li><strong>Firebase Analytics:</strong> For understanding app usage and improving user experience</li>
+                <li><strong>Firebase Cloud Messaging:</strong> For push notifications</li>
+                <li><strong>Firebase In-App Messaging:</strong> For in-app announcements and tips</li>
+            </ul>
+            <p>Firebase Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+            <h3>3.2 RevenueCat</h3>
+            <ul>
+                <li><strong>Purpose:</strong> To manage in-app subscriptions and purchases</li>
+                <li><strong>Data Collected:</strong> Purchase history, subscription status, and user identifiers</li>
+            </ul>
+            <p>RevenueCat Privacy Policy: <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></p>
+
+            <h3>3.3 Google Sign-In</h3>
+            <ul>
+                <li><strong>Purpose:</strong> To provide easy and secure authentication</li>
+                <li><strong>Data Collected:</strong> Email address and basic profile information</li>
+            </ul>
+
+            <h3>3.4 Sign in with Apple</h3>
+            <ul>
+                <li><strong>Purpose:</strong> To provide privacy-focused authentication</li>
+                <li><strong>Data Collected:</strong> Email address (or private relay email) and user identifier</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Important:</strong> We do not share your personal data with any third parties beyond Firebase and RevenueCat, which are essential for providing our services. We will never sell your data to advertisers or other third parties.
+            </div>
+
+            <h2>4. Data Storage and Security</h2>
+
+            <h3>4.1 Local Storage</h3>
+            <p>Your supplement data is primarily stored locally on your device using CoreData. This ensures your data is accessible even without an internet connection.</p>
+
+            <h3>4.2 Cloud Storage</h3>
+            <p>When you sign in, your data is optionally synced to Firebase Firestore, allowing you to access your data across multiple devices. This data is encrypted in transit and at rest.</p>
+
+            <h3>4.3 Security Measures</h3>
+            <ul>
+                <li>Data encryption in transit using HTTPS/TLS</li>
+                <li>Secure authentication via Firebase Authentication</li>
+                <li>Regular security updates and patches</li>
+                <li>Limited access to user data within our team</li>
+            </ul>
+
+            <h2>5. Your Rights and Choices</h2>
+
+            <h3>5.1 Access and Control</h3>
+            <ul>
+                <li><strong>View Your Data:</strong> You can view all your supplement data within the app</li>
+                <li><strong>Edit Your Data:</strong> You can modify or delete any supplement or record at any time</li>
+            </ul>
+
+            <h3>5.2 Account Deletion</h3>
+            <p>You can delete your account at any time from the app settings. This will:</p>
+            <ul>
+                <li>Delete all your data from our servers (Firebase)</li>
+                <li>Remove your authentication information</li>
+                <li>Cancel any active subscriptions</li>
+                <li>Note: Local data on your device will remain until you uninstall the app</li>
+            </ul>
+
+            <h3>5.3 Notification Control</h3>
+            <p>You can control notification permissions through your device settings and manage notification preferences within the app.</p>
+
+            <h2>6. International Data Transfers</h2>
+
+            <p>Your data may be transferred to and processed in countries other than your country of residence. We ensure that appropriate safeguards are in place to protect your data in accordance with this Privacy Policy.</p>
+
+            <h2>7. Changes to This Privacy Policy</h2>
+
+            <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by:</p>
+            <ul>
+                <li>Posting the new Privacy Policy in the app</li>
+                <li>Updating the "Last Updated" date</li>
+                <li>Sending you a notification (for material changes)</li>
+            </ul>
+
+            <h2>8. Contact Us</h2>
+
+            <div class="contact">
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:xwvoid+supplement@gmail.com">xwvoid+supplement@gmail.com</a></p>
+                <p><strong>App:</strong> SuppleMate</p>
+                <p><strong>Developer:</strong> sumect</p>
+            </div>
+        </div>
+
+        <!-- Chinese Version -->
+        <div id="content-zh" class="lang-content">
+            <h1>隐私政策</h1>
+            <p class="last-updated">最后更新时间:2025年1月</p>
+
+            <p>欢迎使用 SuppleMate("我们"、"我们的")。我们致力于保护您的隐私并确保您个人信息的安全。本隐私政策说明了当您使用我们的移动应用程序时,我们如何收集、使用、披露和保护您的信息。</p>
+
+            <div class="highlight">
+                <strong>要点:</strong>
+                <ul>
+                    <li>您的补充剂数据存储在您的设备本地,并可选择通过 Firebase 同步</li>
+                    <li>我们仅使用 Firebase 和 RevenueCat 来提供服务</li>
+                    <li>未经您同意,我们不会与第三方共享您的数据</li>
+                    <li>您可以完全控制自己的数据</li>
+                </ul>
+            </div>
+
+            <h2>1. 我们收集的信息</h2>
+
+            <h3>1.1 您提供的信息</h3>
+            <ul>
+                <li><strong>账户信息:</strong> 当您使用 Google 或 Apple 登录时,我们会收集您的电子邮件地址和基本个人资料信息</li>
+                <li><strong>补充剂数据:</strong> 关于您的补充剂的信息,包括名称、剂量、时间表、库存和过期日期</li>
+                <li><strong>使用记录:</strong> 您服用补充剂的时间记录</li>
+                <li><strong>设置和偏好:</strong> 您的应用设置、通知偏好和时间标签配置</li>
+            </ul>
+
+            <h3>1.2 自动收集的信息</h3>
+            <ul>
+                <li><strong>设备信息:</strong> 设备类型、操作系统版本和应用版本</li>
+                <li><strong>使用分析:</strong> 应用使用模式、功能交互和崩溃报告(通过 Firebase Analytics)</li>
+                <li><strong>通知令牌:</strong> 用于推送通知的设备令牌(通过 Firebase Cloud Messaging)</li>
+            </ul>
+
+            <h2>2. 我们如何使用您的信息</h2>
+
+            <p>我们将收集的信息用于以下目的:</p>
+            <ul>
+                <li><strong>服务提供:</strong> 提供补充剂提醒、跟踪您的摄入量并管理您的补充剂库存</li>
+                <li><strong>数据同步:</strong> 当您登录时,在您的设备之间同步数据</li>
+                <li><strong>应用改进:</strong> 分析使用模式并改进应用功能</li>
+                <li><strong>订阅管理:</strong> 通过 RevenueCat 管理您的高级订阅</li>
+                <li><strong>通知:</strong> 向您发送关于补充剂时间表的本地和推送通知</li>
+                <li><strong>客户支持:</strong> 回复您的咨询并提供技术支持</li>
+            </ul>
+
+            <h2>3. 第三方服务</h2>
+
+            <p>我们使用以下第三方服务来提供和改进我们的应用:</p>
+
+            <h3>3.1 Firebase (Google)</h3>
+            <ul>
+                <li><strong>Firebase Authentication:</strong> 用于安全的用户身份验证</li>
+                <li><strong>Firebase Firestore:</strong> 用于云数据存储和同步</li>
+                <li><strong>Firebase Analytics:</strong> 用于了解应用使用情况并改善用户体验</li>
+                <li><strong>Firebase Cloud Messaging:</strong> 用于推送通知</li>
+                <li><strong>Firebase In-App Messaging:</strong> 用于应用内公告和提示</li>
+            </ul>
+            <p>Firebase 隐私政策: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+            <h3>3.2 RevenueCat</h3>
+            <ul>
+                <li><strong>用途:</strong> 管理应用内订阅和购买</li>
+                <li><strong>收集的数据:</strong> 购买历史、订阅状态和用户标识符</li>
+            </ul>
+            <p>RevenueCat 隐私政策: <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></p>
+
+            <h3>3.3 Google 登录</h3>
+            <ul>
+                <li><strong>用途:</strong> 提供简单安全的身份验证</li>
+                <li><strong>收集的数据:</strong> 电子邮件地址和基本个人资料信息</li>
+            </ul>
+
+            <h3>3.4 通过 Apple 登录</h3>
+            <ul>
+                <li><strong>用途:</strong> 提供注重隐私的身份验证</li>
+                <li><strong>收集的数据:</strong> 电子邮件地址(或私密中继电子邮件)和用户标识符</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>重要提示:</strong> 除了提供服务所必需的 Firebase 和 RevenueCat 之外,我们不会与任何第三方共享您的个人数据。我们绝不会将您的数据出售给广告商或其他第三方。
+            </div>
+
+            <h2>4. 数据存储和安全</h2>
+
+            <h3>4.1 本地存储</h3>
+            <p>您的补充剂数据主要使用 CoreData 存储在您的设备本地。这确保即使没有互联网连接,您也可以访问数据。</p>
+
+            <h3>4.2 云存储</h3>
+            <p>当您登录时,您的数据可选择同步到 Firebase Firestore,允许您在多个设备上访问数据。这些数据在传输和静态时都经过加密。</p>
+
+            <h3>4.3 安全措施</h3>
+            <ul>
+                <li>使用 HTTPS/TLS 进行传输中的数据加密</li>
+                <li>通过 Firebase Authentication 进行安全身份验证</li>
+                <li>定期安全更新和补丁</li>
+                <li>团队内部对用户数据的访问受限</li>
+            </ul>
+
+            <h2>5. 您的权利和选择</h2>
+
+            <h3>5.1 访问和控制</h3>
+            <ul>
+                <li><strong>查看您的数据:</strong> 您可以在应用内查看所有补充剂数据</li>
+                <li><strong>编辑您的数据:</strong> 您可以随时修改或删除任何补充剂或记录</li>
+            </ul>
+
+            <h3>5.2 账户删除</h3>
+            <p>您可以随时从应用设置中删除账户。这将:</p>
+            <ul>
+                <li>从我们的服务器(Firebase)删除您的所有数据</li>
+                <li>删除您的身份验证信息</li>
+                <li>取消任何活跃的订阅</li>
+                <li>注意:设备上的本地数据将保留,直到您卸载应用</li>
+            </ul>
+
+            <h3>5.3 通知控制</h3>
+            <p>您可以通过设备设置控制通知权限,并在应用内管理通知偏好。</p>
+
+            <h2>6. 国际数据传输</h2>
+
+            <p>您的数据可能会被传输到您居住国以外的国家并在那里处理。我们确保采取适当的保障措施,根据本隐私政策保护您的数据。</p>
+
+            <h2>7. 本隐私政策的变更</h2>
+
+            <p>我们可能会不时更新本隐私政策。我们将通过以下方式通知您任何重大变更:</p>
+            <ul>
+                <li>在应用中发布新的隐私政策</li>
+                <li>更新"最后更新时间"日期</li>
+                <li>向您发送通知(对于重大变更)</li>
+            </ul>
+
+            <h2>8. 联系我们</h2>
+
+            <div class="contact">
+                <p>如果您对本隐私政策或我们的数据处理方式有任何问题、疑虑或请求,请通过以下方式联系我们:</p>
+                <p><strong>电子邮件:</strong> <a href="mailto:xwvoid+supplement@gmail.com">xwvoid+supplement@gmail.com</a></p>
+                <p><strong>应用:</strong> SuppleMate</p>
+                <p><strong>开发者:</strong> sumect</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.language-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected content
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            
+            // Save preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Load saved language preference or detect browser language
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            const browserLang = navigator.language || navigator.userLanguage;
+
+            if (savedLang) {
+                switchLanguage(savedLang);
+            } else if (browserLang.startsWith('zh')) {
+                switchLanguage('zh');
+            }
+            // Default is English, already active
+        });
+    </script>
+</body>
+</html>

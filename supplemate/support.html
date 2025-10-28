@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - SuppleMate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .language-toggle {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        
+        .language-toggle button {
+            background: #007AFF;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 8px;
+            transition: background 0.3s;
+        }
+        
+        .language-toggle button:hover {
+            background: #0051D5;
+        }
+        
+        .language-toggle button.active {
+            background: #34C759;
+        }
+        
+        h1 {
+            color: #1d1d1f;
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            color: #1d1d1f;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: #1d1d1f;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #515154;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #515154;
+        }
+        
+        .faq-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #007AFF;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .faq-answer {
+            color: #515154;
+        }
+        
+        .contact {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .contact a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .feature-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .feature-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-toggle">
+            <button onclick="switchLanguage('en')" id="btn-en" class="active">English</button>
+            <button onclick="switchLanguage('zh')" id="btn-zh">中文</button>
+        </div>
+        
+        <!-- English Version -->
+        <div id="content-en" class="lang-content active">
+            <h1>Support</h1>
+            <p>Welcome to SuppleMate Support! We're here to help you get the most out of your supplement tracking experience.</p>
+            
+            <h2>Getting Started</h2>
+            
+            <h3>Creating Your First Supplement</h3>
+            <p>To add a new supplement:</p>
+            <ul>
+                <li>Tap the "+" button on the main screen</li>
+                <li>Enter the supplement name and dosage</li>
+                <li>Set your preferred schedule (daily, weekly, or custom)</li>
+                <li>Add inventory information (optional)</li>
+                <li>Save and you're done!</li>
+            </ul>
+            
+            <h3>Setting Up Reminders</h3>
+            <p>Never miss a dose with our reminder system:</p>
+            <ul>
+                <li>Open any supplement from your list</li>
+                <li>Tap "Edit" and scroll to "Reminders"</li>
+                <li>Enable notifications and set your preferred times</li>
+                <li>Customize time labels (Morning, Afternoon, Evening, etc.)</li>
+            </ul>
+            
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: How do I sync my data across devices?</div>
+                <div class="faq-answer">A: Sign in with your Google or Apple account in Settings. Your data will automatically sync across all your devices.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: Can I use the app without an internet connection?</div>
+                <div class="faq-answer">A: Yes! All your data is stored locally on your device. You can use SuppleMate completely offline. Syncing only requires internet when you want to access data on multiple devices.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: How do I track my supplement inventory?</div>
+                <div class="faq-answer">A: When editing a supplement, you can add the total quantity and set an expiration date. The app will automatically track remaining quantity as you log doses and alert you when running low.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: What's the difference between the free and premium versions?</div>
+                <div class="faq-answer">A: The free version allows you to track unlimited supplements with basic features. Premium unlocks advanced analytics, custom time labels, cloud sync, and priority support.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: How do I delete my account?</div>
+                <div class="faq-answer">A: Go to Settings > Account > Delete Account. This will remove all your data from our servers. Note that local data will remain on your device until you uninstall the app.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: I'm not receiving notifications. What should I do?</div>
+                <div class="faq-answer">A: First, check that notifications are enabled in your device Settings > SuppleMate > Notifications. Also ensure that reminders are enabled for each supplement in the app.</div>
+            </div>
+            
+            <h2>Features Guide</h2>
+            
+            <div class="feature-box">
+                <h3>📊 Usage History</h3>
+                <p>View your complete supplement intake history. Track patterns, see statistics, and monitor your consistency over time.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>📦 Inventory Management</h3>
+                <p>Keep track of how much you have left. Set expiration dates and get alerts when it's time to reorder.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>🔔 Smart Reminders</h3>
+                <p>Customizable notifications that adapt to your schedule. Set multiple times per day with custom labels.</p>
+            </div>
+            
+            <h2>Troubleshooting</h2>
+            
+            <h3>App Crashes or Freezes</h3>
+            <ul>
+                <li>Make sure you're running the latest version of the app</li>
+                <li>Try restarting your device</li>
+                <li>If the problem persists, contact support with details about when the crash occurs</li>
+            </ul>
+            
+            <h3>Sync Issues</h3>
+            <ul>
+                <li>Check your internet connection</li>
+                <li>Sign out and sign back in to your account</li>
+                <li>Ensure you're using the same account on all devices</li>
+            </ul>
+            
+            <h3>Missing Data</h3>
+            <ul>
+                <li>If you're signed in, your data should sync automatically</li>
+                <li>Check if you're viewing the correct date range in history</li>
+                <li>Contact support if data is genuinely missing</li>
+            </ul>
+            
+            <h2>Contact Us</h2>
+            
+            <div class="contact">
+                <p>Still need help? We're here for you!</p>
+                <p><strong>Email:</strong> <a href="mailto:xwvoid+supplement@gmail.com">xwvoid+supplement@gmail.com</a></p>
+                <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
+                <p><strong>Developer:</strong> sumect</p>
+                <p style="margin-top: 15px;">When contacting support, please include:</p>
+                <ul>
+                    <li>Your device model and iOS version</li>
+                    <li>App version (found in Settings)</li>
+                    <li>A detailed description of the issue</li>
+                    <li>Screenshots if applicable</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chinese Version -->
+        <div id="content-zh" class="lang-content">
+            <h1>支持</h1>
+            <p>欢迎来到 SuppleMate 支持中心!我们在这里帮助您充分利用补充剂跟踪体验。</p>
+            
+            <h2>入门指南</h2>
+            
+            <h3>创建您的第一个补充剂</h3>
+            <p>添加新补充剂:</p>
+            <ul>
+                <li>点击主屏幕上的"+"按钮</li>
+                <li>输入补充剂名称和剂量</li>
+                <li>设置您的首选时间表(每天、每周或自定义)</li>
+                <li>添加库存信息(可选)</li>
+                <li>保存即可!</li>
+            </ul>
+            
+            <h3>设置提醒</h3>
+            <p>使用我们的提醒系统,永远不会错过服用:</p>
+            <ul>
+                <li>从列表中打开任何补充剂</li>
+                <li>点击"编辑"并滚动到"提醒"</li>
+                <li>启用通知并设置您的首选时间</li>
+                <li>自定义时间标签(早上、下午、晚上等)</li>
+            </ul>
+            
+            <h2>常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">问:如何在设备之间同步数据?</div>
+                <div class="faq-answer">答:在设置中使用您的 Google 或 Apple 账户登录。您的数据将自动在所有设备之间同步。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">问:我可以在没有互联网连接的情况下使用应用吗?</div>
+                <div class="faq-answer">答:可以!您的所有数据都存储在设备本地。您可以完全离线使用 SuppleMate。只有当您想在多个设备上访问数据时才需要互联网进行同步。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">问:如何跟踪补充剂库存?</div>
+                <div class="faq-answer">答:编辑补充剂时,您可以添加总数量并设置过期日期。当您记录剂量时,应用会自动跟踪剩余数量,并在库存不足时提醒您。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">问:免费版和高级版有什么区别?</div>
+                <div class="faq-answer">答:免费版允许您使用基本功能跟踪无限数量的补充剂。高级版解锁高级分析、自定义时间标签、云同步和优先支持。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">问:如何删除我的账户?</div>
+                <div class="faq-answer">答:前往 设置 > 账户 > 删除账户。这将从我们的服务器中删除您的所有数据。请注意,本地数据将保留在您的设备上,直到您卸载应用。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">问:我没有收到通知。我该怎么办?</div>
+                <div class="faq-answer">答:首先,检查设备设置 > SuppleMate > 通知中是否启用了通知。还要确保在应用中为每个补充剂启用了提醒。</div>
+            </div>
+            
+            <h2>功能指南</h2>
+            
+            <div class="feature-box">
+                <h3>📊 使用历史</h3>
+                <p>查看您完整的补充剂摄入历史。跟踪模式,查看统计数据,并监控您随时间的一致性。</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>📦 库存管理</h3>
+                <p>跟踪剩余数量。设置过期日期,并在需要重新订购时收到提醒。</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>🔔 智能提醒</h3>
+                <p>可自定义的通知,适应您的时间表。每天设置多个时间,并使用自定义标签。</p>
+            </div>
+            
+            <h2>故障排除</h2>
+            
+            <h3>应用崩溃或冻结</h3>
+            <ul>
+                <li>确保您运行的是最新版本的应用</li>
+                <li>尝试重启设备</li>
+                <li>如果问题仍然存在,请联系支持并提供崩溃发生时的详细信息</li>
+            </ul>
+            
+            <h3>同步问题</h3>
+            <ul>
+                <li>检查您的互联网连接</li>
+                <li>退出并重新登录您的账户</li>
+                <li>确保您在所有设备上使用相同的账户</li>
+            </ul>
+            
+            <h3>数据丢失</h3>
+            <ul>
+                <li>如果您已登录,您的数据应该会自动同步</li>
+                <li>检查您是否在历史记录中查看了正确的日期范围</li>
+                <li>如果数据确实丢失,请联系支持</li>
+            </ul>
+            
+            <h2>联系我们</h2>
+            
+            <div class="contact">
+                <p>还需要帮助?我们随时为您服务!</p>
+                <p><strong>电子邮件:</strong> <a href="mailto:xwvoid+supplement@gmail.com">xwvoid+supplement@gmail.com</a></p>
+                <p><strong>响应时间:</strong> 我们通常在 24-48 小时内回复</p>
+                <p><strong>开发者:</strong> sumect</p>
+                <p style="margin-top: 15px;">联系支持时,请包括:</p>
+                <ul>
+                    <li>您的设备型号和 iOS 版本</li>
+                    <li>应用版本(在设置中找到)</li>
+                    <li>问题的详细描述</li>
+                    <li>如果适用,请提供截图</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.language-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected content
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            
+            // Save preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Load saved language preference or detect browser language
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            if (savedLang) {
+                switchLanguage(savedLang);
+            } else if (browserLang.startsWith('zh')) {
+                switchLanguage('zh');
+            }
+            // Default is English, already active
+        });
+    </script>
+</body>
+</html>
+
