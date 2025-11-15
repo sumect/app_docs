@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #1d1d1f;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #515154;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background: #007aff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .lang-btn:hover {
+            background: #0051d5;
+        }
+        .lang-btn.active {
+            background: #0051d5;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #515154;
+        }
+        .contact-box {
+            background: #f5f5f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .contact-box h3 {
+            color: #1d1d1f;
+            margin-bottom: 10px;
+        }
+        .email-link {
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        a {
+            color: #007aff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .faq-item {
+            margin-bottom: 25px;
+        }
+        .faq-item h3 {
+            color: #1d1d1f;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('en')">English</button>
+            <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+        </div>
+
+        <!-- English Version -->
+        <div id="en-content" class="content active">
+            <h1>Support</h1>
+            <p>We're here to help! If you have any questions or need assistance with our photo management app, please don't hesitate to reach out.</p>
+
+            <div class="contact-box">
+                <h3>Contact Us</h3>
+                <p class="email-link">Email: <a href="mailto:sumect+photo@gmail.com">sumect+photo@gmail.com</a></p>
+                <p>We typically respond within 24-48 hours.</p>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>Q: Are my photos stored on your servers?</h3>
+                <p>A: No, absolutely not. All photo and video processing is performed entirely on your local device. Your media files never leave your device and are never uploaded to our servers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: Why do I need to create an account?</h3>
+                <p>A: The account is optional and is only used to share subscription authorization across other apps within our app suite. This allows you to access premium features across multiple apps with a single subscription.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: How can I delete my account?</h3>
+                <p>A: You can delete your account at any time from the app settings. Go to Settings > Account > Delete Account. Please note that this action is permanent and cannot be undone.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: What happens to my subscription if I delete my account?</h3>
+                <p>A: When you delete your account, your subscription status will be terminated. However, your photos and videos remain safe on your device as they were never uploaded to our servers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Q: How do I report a bug or request a feature?</h3>
+                <p>A: Please email us at <a href="mailto:sumect+photo@gmail.com">sumect+photo@gmail.com</a> with details about the bug or your feature request. We appreciate your feedback!</p>
+            </div>
+
+            <h2>Need More Help?</h2>
+            <p>If you can't find the answer to your question above, please contact us at <a href="mailto:sumect+photo@gmail.com">sumect+photo@gmail.com</a>. We're always happy to help!</p>
+        </div>
+
+        <!-- Chinese Version -->
+        <div id="zh-content" class="content">
+            <h1>技术支持</h1>
+            <p>我们随时为您提供帮助!如果您对我们的照片管理应用有任何疑问或需要帮助,请随时与我们联系。</p>
+
+            <div class="contact-box">
+                <h3>联系我们</h3>
+                <p class="email-link">邮箱: <a href="mailto:sumect+photo@gmail.com">sumect+photo@gmail.com</a></p>
+                <p>我们通常会在24-48小时内回复。</p>
+            </div>
+
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>问: 我的照片会存储在你们的服务器上吗?</h3>
+                <p>答: 不会,绝对不会。所有照片和视频的处理完全在您的本地设备上完成。您的媒体文件永远不会离开您的设备,也不会上传到我们的服务器。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>问: 为什么需要创建账户?</h3>
+                <p>答: 账户是可选的,仅用于在我们应用套装内的其他应用之间共享订阅授权。这使您可以通过单个订阅访问多个应用的高级功能。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>问: 如何删除我的账户?</h3>
+                <p>答: 您可以随时从应用设置中删除您的账户。进入 设置 > 账户 > 删除账户。请注意,此操作是永久性的,无法撤销。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>问: 如果我删除账户,我的订阅会怎样?</h3>
+                <p>答: 当您删除账户时,您的订阅状态将被终止。但是,您的照片和视频仍然安全地保存在您的设备上,因为它们从未上传到我们的服务器。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>问: 如何报告错误或请求新功能?</h3>
+                <p>答: 请发送邮件至 <a href="mailto:sumect+photo@gmail.com">sumect+photo@gmail.com</a>,并详细说明错误或您的功能请求。我们非常感谢您的反馈!</p>
+            </div>
+
+            <h2>需要更多帮助?</h2>
+            <p>如果您在上面找不到问题的答案,请通过 <a href="mailto:sumect+photo@gmail.com">sumect+photo@gmail.com</a> 联系我们。我们随时乐意为您提供帮助!</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Remove active state from all buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById(lang + '-content').classList.add('active');
+            
+            // Set active button
+            event.target.classList.add('active');
+            
+            // Update page language
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+    </script>
+</body>
+</html>
