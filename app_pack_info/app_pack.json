@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updated_at": "2024-11-26",
+  "version": 2,
+  "updated_at": "2025-11-26",
   "apps": [
     {
       "id": 6753857978,
@@ -52,6 +52,19 @@
         "zh": "探索1000+幅梵高高清画作，配有专家解读与智能筛选功能",
         "ja": "1000点以上のゴッホ作品をHDで鑑賞、専門家の解説とスマートフィルター付き",
         "ko": "1000개 이상의 반 고흐 걸작을 HD로 감상하고 전문가 해설과 스마트 필터를 활용하세요"
+      }
+    },
+    {
+      "id": 6748627318,
+      "name": "Quick 24",
+      "icon": "number.square.fill",
+      "icon_color": "#5856D6",
+      "url_scheme": "quick24://",
+      "descriptions": {
+        "en": "Classic 24-point math puzzle game with 600 problems across 20 difficulty levels",
+        "zh": "经典24点数学益智游戏，600道题目覆盖20个难度等级",
+        "ja": "600問、20段階の難易度を備えたクラシック24ポイント数学パズルゲーム",
+        "ko": "20개 난이도에 걸친 600개 문제가 있는 클래식 24점 수학 퍼즐 게임"
       }
     }
   ]
