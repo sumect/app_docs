@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "updated_at": "2024-11-26",
+  "apps": [
+    {
+      "id": 6753857978,
+      "name": "PureBit Music",
+      "icon": "music.note",
+      "icon_color": "#FF9500",
+      "url_scheme": "purebitmusic://",
+      "descriptions": {
+        "en": "Lossless music player supporting FLAC, APE, CUE and more formats",
+        "zh": "无损音质播放器，支持FLAC、APE、CUE等格式",
+        "ja": "FLAC、APE、CUEなどのフォーマットに対応したロスレス音楽プレーヤー",
+        "ko": "FLAC, APE, CUE 등의 형식을 지원하는 무손실 음악 플레이어"
+      }
+    },
+    {
+      "id": 6740084610,
+      "name": "SuppleMate",
+      "icon": "pills.fill",
+      "icon_color": "#34C759",
+      "url_scheme": "supplemate://",
+      "descriptions": {
+        "en": "Smart supplement management assistant to track your nutrition intake",
+        "zh": "智能补剂管理助手，记录和追踪您的营养补充",
+        "ja": "栄養摂取を記録・追跡するスマートサプリメント管理アシスタント",
+        "ko": "영양 섭취를 기록하고 추적하는 스마트 보충제 관리 도우미"
+      }
+    },
+    {
+      "id": 6752605388,
+      "name": "PlanDoPro",
+      "icon": "checklist",
+      "icon_color": "#007AFF",
+      "url_scheme": "plandopro://",
+      "descriptions": {
+        "en": "Focus timer and task manager for efficient planning and execution",
+        "zh": "专业项目与任务管理工具，帮助你高效规划与执行",
+        "ja": "効率的な計画と実行のためのプロフェッショナルなプロジェクト＆タスク管理ツール",
+        "ko": "효율적인 계획과 실행을 위한 전문 프로젝트 및 작업 관리 도구"
+      }
+    },
+    {
+      "id": 6747972275,
+      "name": "Van Gogh Art Collection",
+      "icon": "paintpalette.fill",
+      "icon_color": "#FFD60A",
+      "url_scheme": "vangogh://",
+      "descriptions": {
+        "en": "Explore 1000+ Van Gogh masterpieces in HD with expert commentary and smart filters",
+        "zh": "探索1000+幅梵高高清画作，配有专家解读与智能筛选功能",
+        "ja": "1000点以上のゴッホ作品をHDで鑑賞、専門家の解説とスマートフィルター付き",
+        "ko": "1000개 이상의 반 고흐 걸작을 HD로 감상하고 전문가 해설과 스마트 필터를 활용하세요"
+      }
+    }
+  ]
+}
